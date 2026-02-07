@@ -15,7 +15,7 @@ end entity;
 
 architecture rtl of D_FF_preset is
 begin
-  D_FLIPFLOP : process (clk, D)
+  D_FLIPFLOP : process (clk, rst, pre)
   begin
     if (rst = '0') then
         Q  <= '0';

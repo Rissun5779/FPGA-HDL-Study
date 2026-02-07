@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Sequential
-Sat Feb  7 22:36:02 2026
+Sat Feb  7 23:26:03 2026
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -37,10 +37,10 @@ on the Quartus Prime software download page.
 +---------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                  ;
 +-------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Feb  7 22:36:02 2026           ;
+; Analysis & Elaboration Status ; Successful - Sat Feb  7 23:26:03 2026           ;
 ; Quartus Prime Version         ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                 ; Sequential                                      ;
-; Top-level Entity Name         ; D_FF_preset                                     ;
+; Top-level Entity Name         ; MultiBus                                        ;
 ; Family                        ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                       ;
 ; Total registers               ; N/A until Partition Merge                       ;
@@ -74,7 +74,7 @@ on the Quartus Prime software download page.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; D_FF_preset        ; Sequential         ;
+; Top-level entity name                                                           ; MultiBus           ; Sequential         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -161,10 +161,22 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Sat Feb  7 22:35:55 2026
+    Info: Processing started: Sat Feb  7 23:25:55 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Sequential -c Sequential --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file MultiBus.vhd
+    Info (12022): Found design unit 1: MultiBus-rtl File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/MultiBus.vhd Line: 19
+    Info (12023): Found entity 1: MultiBus File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/MultiBus.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Shift_Register.vhd
+    Info (12022): Found design unit 1: Shift_Register-rtl File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/Shift_Register.vhd Line: 17
+    Info (12023): Found entity 1: Shift_Register File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/Shift_Register.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Reg.vhd
+    Info (12022): Found design unit 1: Reg-rtl File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/Reg.vhd Line: 15
+    Info (12023): Found entity 1: Reg File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/Reg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file D_FF_Full.vhd
+    Info (12022): Found design unit 1: D_FF_Full-rtl File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/D_FF_Full.vhd Line: 17
+    Info (12023): Found entity 1: D_FF_Full File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/D_FF_Full.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file D_FF_preset.vhd
     Info (12022): Found design unit 1: D_FF_preset-rtl File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/D_FF_preset.vhd Line: 16
     Info (12023): Found entity 1: D_FF_preset File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/D_FF_preset.vhd Line: 5
@@ -177,13 +189,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file D_FF.vh
 Info (12021): Found 2 design units, including 1 entities, in source file D_Latch.vhd
     Info (12022): Found design unit 1: D_Latch-rtl File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/D_Latch.vhd Line: 14
     Info (12023): Found entity 1: D_Latch File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/D_Latch.vhd Line: 5
-Info (12127): Elaborating entity "D_FF_preset" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at D_FF_preset.vhd(20): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/D_FF_preset.vhd Line: 20
-Warning (10492): VHDL Process Statement warning at D_FF_preset.vhd(23): signal "pre" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/rissun57/Desktop/FPGA/VHDL/Sequential/D_FF_preset.vhd Line: 23
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 777 megabytes
-    Info: Processing ended: Sat Feb  7 22:36:02 2026
-    Info: Elapsed time: 00:00:07
+Info (12127): Elaborating entity "MultiBus" for the top level hierarchy
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 780 megabytes
+    Info: Processing ended: Sat Feb  7 23:26:03 2026
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:20
 
 
