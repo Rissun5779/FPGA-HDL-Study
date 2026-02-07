@@ -1,11 +1,11 @@
-|PBWC
-CLK => current_state.CLK
-RST => current_state.ACLR
-PRESS => next_state.DATAB
-PRESS => OPEN_CW.DATAB
-PRESS => CLOSE_CW.DATAA
-PRESS => next_state.DATAA
-OPEN_CW <= OPEN_CW.DB_MAX_OUTPUT_PORT_TYPE
-CLOSE_CW <= CLOSE_CW.DB_MAX_OUTPUT_PORT_TYPE
+|FSM_0
+CLK => current_state~1.DATAIN
+RST => current_state~3.DATAIN
+Din => next_state.D0_IS_1.DATAB
+Din => next_state.D1_IS_1.DATAB
+Din => ERR.DATAB
+Din => next_state.D0_NOT_1.DATAB
+Din => Selector0.IN2
+ERR <= ERR.DB_MAX_OUTPUT_PORT_TYPE
 
 
