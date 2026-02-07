@@ -75,3 +75,54 @@ A <= B
 | `B’length` | vector 的長度（例如 8 位元）         | integer |
 | `B’left`   | vector 的左邊界（最高位 index，例如 7） | integer |
 | `B’right`  | vector 的右邊界（最低位 index，例如 0） | integer |
+
+# Package
+## STD_LOGIC_1164
+TYPE std_ulogic IS ( 'U',  -- Uninitialized
+                         'X',  -- Forcing  Unknown
+                         '0',  -- Forcing  0
+                         '1',  -- Forcing  1
+                         'Z',  -- High Impedance   
+                         'W',  -- Weak     Unknown
+                         'L',  -- Weak     0       
+                         'H',  -- Weak     1       
+                         '-'   -- Don't care
+                       );
+
+## NUMERIC_STD
+- +, -, *, /, mod, rem and abs
+- rising_edge()  and  falling_edge()  
+- To_integer() unsigned integer 
+  To_integer() signed integer 
+  To_unsigned() integer,  <size> unsigned  (size-1  downto  0) 
+  To_signed() integer,  <size> signed  (size-1  downto  0) 
+
+## TEXTIO  and  STD_LOGIC_TEXTIO 
+- file  Fout:  TEXT  open  WRITE_MODE  is  "output_file.txt";
+- file  Fin:  TEXT  open  READ_MODE  is  "input_file.txt"; 
+
+- variable  <line_variable_name>  :  line; 
+
+- readline(<file_handle>,  <line_variable_name>); 
+- writeline(<file_handle>,  <line_variable_name>); 
+
+- read(<line_variable_name>,  <destination_variable>); 
+- write(<line_variable_name>,  <source_variable>); 
+
+## MATH_REAL
+- library  IEEE; 
+  use  IEEE.math_real.all;
+
+MATH_E real 2.718 Value  of  e 
+MATH_1_E real 0.367 Value  of  1/e 
+MATH_PI real 3.141 Value  of  pi 
+MATH_1_PI real 0.318 Value  of  1/pi 
+MATH_LOG_OF_2 real 0.693 Natural  log  of  2 
+MATH_LOG_OF_10 real 2.302 Natural  log  of10 
+MATH_LOG2_OF_E real 1.442 Log  base  2  of  e 
+MATH_LOG10_OF_E real 0.434 Log  base  10  of  e 
+MATH_SQRT2 real 1.414 Sqrt  of  2 
+MATH_SQRT1_2 real 0.707 Sqrt  of  1/2 
+MATH_SQRT_PI real 1.772 Sqrt  of  pi 
+MATH_DEG_TO_RAD real 0.017 Conversion  factor  from  degree  to  radian 
+MATH_RAD_TO_DEG real 57.295 Conversion  factor  from  radian  to  degree 
