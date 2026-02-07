@@ -1,6 +1,10 @@
-|D_FF
+|D_FF_preset
 clk => Qn~reg0.CLK
 clk => Q~reg0.CLK
+rst => Q.IN0
+rst => Qn~reg0.PRESET
+rst => Q~reg0.ACLR
+pre => Q.IN1
 D => Q~reg0.DATAIN
 D => Qn~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
